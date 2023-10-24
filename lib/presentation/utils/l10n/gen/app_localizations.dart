@@ -5,8 +5,6 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
-import 'app_localizations_az.dart';
-import 'app_localizations_en.dart';
 import 'app_localizations_tr.dart';
 
 /// Callers can lookup localized strings with an instance of AppLocalizations
@@ -90,22 +88,38 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('az'),
-    Locale('en'),
     Locale('tr')
   ];
 
   /// No description provided for @notFoundNavigation.
   ///
-  /// In en, this message translates to:
+  /// In tr, this message translates to:
   /// **'403'**
   String get notFoundNavigation;
 
   /// No description provided for @noInternet.
   ///
-  /// In en, this message translates to:
-  /// **'You don\'\'t have internet connection.'**
+  /// In tr, this message translates to:
+  /// **'İnternet bağlantınız yok.'**
   String get noInternet;
+
+  /// No description provided for @diameter.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çap'**
+  String get diameter;
+
+  /// No description provided for @round.
+  ///
+  /// In tr, this message translates to:
+  /// **'Tur'**
+  String get round;
+
+  /// No description provided for @meter.
+  ///
+  /// In tr, this message translates to:
+  /// **'Metre'**
+  String get meter;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -117,7 +131,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['az', 'en', 'tr'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['tr'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -128,8 +142,6 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'az': return AppLocalizationsAz();
-    case 'en': return AppLocalizationsEn();
     case 'tr': return AppLocalizationsTr();
   }
 

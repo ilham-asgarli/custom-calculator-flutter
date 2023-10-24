@@ -9,4 +9,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get noInternet => 'İnternet bağlantınız yok.';
+
+  @override
+  String get diameter => 'Çap';
+
+  @override
+  String get round => 'Tur';
+
+  @override
+  String get meter => 'Metre';
 }

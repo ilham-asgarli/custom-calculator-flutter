@@ -1,4 +1,7 @@
 {
   "notFoundNavigation": "403",
-  "noInternet": "İnternet bağlantınız yok."
+  "noInternet": "İnternet bağlantınız yok.",
+  "diameter": "Çap",
+  "round": "Tur",
+  "meter": "Metre"
 }
