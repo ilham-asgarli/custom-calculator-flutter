@@ -11,6 +11,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get noInternet => 'İnternet bağlantınız yok.';
 
   @override
+  String get calculate => 'Hesapla';
+
+  @override
   String get diameter => 'Çap';
 
   @override
@@ -18,4 +21,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get meter => 'Metre';
+
+  @override
+  String get meterCalculate => 'Metre Hesaplaması';
+
+  @override
+  String get percentCalculate => 'Yüzde Hesaplaması';
+
+  @override
+  String get meterHourProduction => 'Metre Saat Üretimi';
 }

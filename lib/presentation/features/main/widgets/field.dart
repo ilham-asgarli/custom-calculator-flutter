@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../utils/extensions/context_extension.dart';
-import '../../../utils/extensions/theme_extension.dart';
-import '../state/cubit/calculate_cubit.dart';
+import '../../../components/textfield/value_text_field.dart';
 
 class Field extends StatelessWidget {
   final String? text;
@@ -28,57 +24,14 @@ class Field extends StatelessWidget {
           ),
         ),
         Expanded(
-          flex: 2,
-          child: Container(
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: context.theme.customColors.primary,
-              ),
-            ),
-            child: TextField(
-              controller: TextEditingController(
-                text: getText(),
-              ),
-              decoration: const InputDecoration(
-                border: InputBorder.none,
-                hintText: "0",
-              ),
-              keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'^(\d+)?\.?\d{0,2}'))
-              ],
-              textAlign: TextAlign.center,
-              onChanged: (value) {
-                if (index != null) {
-                  BlocProvider.of<CalculateCubit>(context).setField(
-                    index!,
-                    getValue(value),
-                  );
-                }
-              },
-            ),
+          flex: text != null ? 2 : 8,
+          child: ValueTextField(
+            index: index,
+            value: value,
           ),
         ),
         const Spacer(),
       ],
     );
-  }
-
-  String getText() {
-    if (value == null) {
-      return "";
-    } else if (value == 0) {
-      return "";
-    } else {
-      return value.toString();
-    }
-  }
-
-  double getValue(String? value) {
-    try {
-      return double.parse(value ?? "");
-    } catch (e) {
-      return 0;
-    }
   }
 }

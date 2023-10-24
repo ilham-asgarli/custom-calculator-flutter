@@ -1,7 +1,11 @@
 {
   "notFoundNavigation": "403",
   "noInternet": "İnternet bağlantınız yok.",
+  "calculate": "Hesapla",
   "diameter": "Çap",
   "round": "Tur",
-  "meter": "Metre"
+  "meter": "Metre",
+  "meterCalculate": "Metre Hesaplaması",
+  "percentCalculate": "Yüzde Hesaplaması",
+  "meterHourProduction": "Metre Saat Üretimi"
 }

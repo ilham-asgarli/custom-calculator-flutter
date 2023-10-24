@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../view-models/main_view_model.dart';
-import '../widgets/diameter_page.dart';
-import '../widgets/meter_page.dart';
-import '../widgets/round_page.dart';
+import '../widgets/page/diameter_page.dart';
+import '../widgets/page/meter_calculate_page.dart';
+import '../widgets/page/meter_hour_production_page.dart';
+import '../widgets/page/meter_page.dart';
+import '../widgets/page/percent_calculate_page.dart';
+import '../widgets/page/round_page.dart';
 
 class MainView extends StatelessWidget {
   final MainViewModel mainViewModel;
@@ -21,6 +24,9 @@ class MainView extends StatelessWidget {
           DiameterPage(mainViewModel: mainViewModel),
           RoundPage(mainViewModel: mainViewModel),
           MeterPage(mainViewModel: mainViewModel),
+          MeterCalculate(mainViewModel: mainViewModel),
+          PercentCalculatePage(mainViewModel: mainViewModel),
+          MeterHourProductionPage(mainViewModel: mainViewModel),
         ],
       ),
     );

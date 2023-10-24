@@ -103,6 +103,12 @@ abstract class AppLocalizations {
   /// **'İnternet bağlantınız yok.'**
   String get noInternet;
 
+  /// No description provided for @calculate.
+  ///
+  /// In tr, this message translates to:
+  /// **'Hesapla'**
+  String get calculate;
+
   /// No description provided for @diameter.
   ///
   /// In tr, this message translates to:
@@ -120,6 +126,24 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Metre'**
   String get meter;
+
+  /// No description provided for @meterCalculate.
+  ///
+  /// In tr, this message translates to:
+  /// **'Metre Hesaplaması'**
+  String get meterCalculate;
+
+  /// No description provided for @percentCalculate.
+  ///
+  /// In tr, this message translates to:
+  /// **'Yüzde Hesaplaması'**
+  String get percentCalculate;
+
+  /// No description provided for @meterHourProduction.
+  ///
+  /// In tr, this message translates to:
+  /// **'Metre Saat Üretimi'**
+  String get meterHourProduction;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
