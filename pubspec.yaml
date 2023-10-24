@@ -70,7 +70,7 @@ dev_dependencies:
   injectable_generator: ^2.4.1
 
 flutter_gen:
-  output: lib/presentation/utils/gen/
+  output: lib/utils/gen/
   line_length: 80
   integrations:
     flutter_svg: true
