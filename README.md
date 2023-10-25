@@ -1,4 +1,4 @@
-# Template flutter project
+# Hesaplama aracı
 Custom Calculator project created with Flutter using MVVM architecture and Future-First structure.
 
 - [Google Play]()
