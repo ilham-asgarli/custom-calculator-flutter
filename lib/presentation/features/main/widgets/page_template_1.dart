@@ -3,24 +3,28 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../utils/constants/enums/app_enum.dart';
 import '../../../utils/extensions/context_extension.dart';
+import '../models/field_model.dart';
 import '../state/cubit/calculate_cubit.dart';
 import '../view-models/main_view_model.dart';
 import 'field.dart';
 
 class PageTemplate1 extends StatefulWidget {
   final String title;
-  final String field1;
-  final String field2;
+  final List<FieldModel> fields;
+  final FieldModel result;
   final MainViewModel mainViewModel;
   final Calculate calculate;
 
   const PageTemplate1({
     super.key,
     required this.title,
-    this.field1 = "",
-    this.field2 = "",
+    required this.fields,
     required this.mainViewModel,
     required this.calculate,
+    this.result = const FieldModel(
+      left: "",
+      right: "",
+    ),
   });
 
   @override
@@ -45,14 +49,11 @@ class _PageTemplate1State extends State<PageTemplate1>
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Field(
-                text: widget.field1,
-                index: 0,
-              ),
-              Field(
-                text: widget.field2,
-                index: 1,
-              ),
+              for (int i = 0; i < widget.fields.length; i++)
+                Field(
+                  fieldModel: widget.fields[i],
+                  index: i,
+                ),
               ElevatedButton(
                 onPressed: () {
                   widget.mainViewModel.calculate(
@@ -67,8 +68,14 @@ class _PageTemplate1State extends State<PageTemplate1>
               BlocBuilder<CalculateCubit, CalculateState>(
                 builder: (context, state) {
                   return Field(
-                    value: state.result,
-                    text: "",
+                    value: () {
+                      try {
+                        return state.result.first;
+                      } catch (e) {
+                        return 0.0;
+                      }
+                    }(),
+                    fieldModel: widget.result,
                   );
                 },
               ),

@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/textfield/value_text_field.dart';
+import '../models/field_model.dart';
 
 class Field extends StatelessWidget {
-  final String? text;
+  final FieldModel? fieldModel;
   final double? value;
   final int? index;
 
   const Field({
     super.key,
-    this.text,
+    this.fieldModel,
     this.index,
     this.value,
   });
@@ -20,17 +21,21 @@ class Field extends StatelessWidget {
       children: [
         Expanded(
           child: Center(
-            child: Text(text ?? ""),
+            child: Text(fieldModel?.left ?? ""),
           ),
         ),
         Expanded(
-          flex: text != null ? 2 : 8,
+          flex: fieldModel != null ? 2 : 8,
           child: ValueTextField(
             index: index,
             value: value,
           ),
         ),
-        const Spacer(),
+        Expanded(
+          child: Center(
+            child: Text(fieldModel?.right ?? ""),
+          ),
+        ),
       ],
     );
   }

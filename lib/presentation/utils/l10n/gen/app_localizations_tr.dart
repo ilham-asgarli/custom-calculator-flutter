@@ -14,20 +14,23 @@ class AppLocalizationsTr extends AppLocalizations {
   String get calculate => 'Hesapla';
 
   @override
-  String get diameter => 'Çap';
+  String get diameter => 'Çap Bulma';
 
   @override
-  String get round => 'Tur';
+  String get round => 'Tur Bulma';
 
   @override
-  String get meter => 'Metre';
+  String get meter => 'Metre Bulma';
 
   @override
-  String get meterCalculate => 'Metre Hesaplaması';
+  String get meterCalculate => 'Çöz. Metre Hesaplama';
 
   @override
-  String get percentCalculate => 'Yüzde Hesaplaması';
+  String get percentCalculate => 'Rack Yüzde Bulma';
 
   @override
-  String get meterHourProduction => 'Metre Saat Üretimi';
+  String get meterHourProduction => 'Saat Başına Üretim';
+
+  @override
+  String get bobbin => 'Çöz. Bobin Hesaplama';
 }

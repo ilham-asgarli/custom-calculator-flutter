@@ -17,13 +17,13 @@ class MainTheme extends ThemeInterface {
       brightness:
           themeMode == ThemeMode.light ? Brightness.light : Brightness.dark,
       visualDensity: VisualDensity.adaptivePlatformDensity,
-      colorSchemeSeed: AppColors.blue,
+      colorSchemeSeed: AppColors.green,
       textTheme: const TextTheme(
         bodyMedium: AppTypography.bodyMedium,
       ),
       extensions: const [
         CustomColorExtension(
-          primary: AppColors.blue,
+          primary: AppColors.green,
         ),
         CustomTextThemeExtension(
           example: AppTypography.example,
@@ -35,8 +35,8 @@ class MainTheme extends ThemeInterface {
   @override
   SystemUiOverlayStyle systemUiOverlayStyle() {
     return const SystemUiOverlayStyle(
-      statusBarColor: AppColors.blue,
-      systemNavigationBarColor: AppColors.blue,
+      statusBarColor: AppColors.green,
+      systemNavigationBarColor: AppColors.green,
     );
   }
 }

@@ -112,38 +112,44 @@ abstract class AppLocalizations {
   /// No description provided for @diameter.
   ///
   /// In tr, this message translates to:
-  /// **'Çap'**
+  /// **'Çap Bulma'**
   String get diameter;
 
   /// No description provided for @round.
   ///
   /// In tr, this message translates to:
-  /// **'Tur'**
+  /// **'Tur Bulma'**
   String get round;
 
   /// No description provided for @meter.
   ///
   /// In tr, this message translates to:
-  /// **'Metre'**
+  /// **'Metre Bulma'**
   String get meter;
 
   /// No description provided for @meterCalculate.
   ///
   /// In tr, this message translates to:
-  /// **'Metre Hesaplaması'**
+  /// **'Çöz. Metre Hesaplama'**
   String get meterCalculate;
 
   /// No description provided for @percentCalculate.
   ///
   /// In tr, this message translates to:
-  /// **'Yüzde Hesaplaması'**
+  /// **'Rack Yüzde Bulma'**
   String get percentCalculate;
 
   /// No description provided for @meterHourProduction.
   ///
   /// In tr, this message translates to:
-  /// **'Metre Saat Üretimi'**
+  /// **'Saat Başına Üretim'**
   String get meterHourProduction;
+
+  /// No description provided for @bobbin.
+  ///
+  /// In tr, this message translates to:
+  /// **'Çöz. Bobin Hesaplama'**
+  String get bobbin;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

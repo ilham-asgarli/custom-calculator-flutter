@@ -2,10 +2,11 @@
   "notFoundNavigation": "403",
   "noInternet": "İnternet bağlantınız yok.",
   "calculate": "Hesapla",
-  "diameter": "Çap",
-  "round": "Tur",
-  "meter": "Metre",
-  "meterCalculate": "Metre Hesaplaması",
-  "percentCalculate": "Yüzde Hesaplaması",
-  "meterHourProduction": "Metre Saat Üretimi"
+  "diameter": "Çap Bulma",
+  "round": "Tur Bulma",
+  "meter": "Metre Bulma",
+  "meterCalculate": "Çöz. Metre Hesaplama",
+  "percentCalculate": "Rack Yüzde Bulma",
+  "meterHourProduction": "Saat Başına Üretim",
+  "bobbin": "Çöz. Bobin Hesaplama"
 }

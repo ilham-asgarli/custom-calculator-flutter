@@ -7,4 +7,5 @@ enum Calculate {
   meterCalculate,
   percentCalculate,
   meterHourProduction,
+  bobbin,
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../view-models/main_view_model.dart';
+import '../widgets/page/bobbin_page.dart';
 import '../widgets/page/diameter_page.dart';
 import '../widgets/page/meter_calculate_page.dart';
 import '../widgets/page/meter_hour_production_page.dart';
@@ -21,12 +22,13 @@ class MainView extends StatelessWidget {
     return SafeArea(
       child: PageView(
         children: [
-          DiameterPage(mainViewModel: mainViewModel),
-          RoundPage(mainViewModel: mainViewModel),
-          MeterPage(mainViewModel: mainViewModel),
           MeterCalculate(mainViewModel: mainViewModel),
           PercentCalculatePage(mainViewModel: mainViewModel),
           MeterHourProductionPage(mainViewModel: mainViewModel),
+          DiameterPage(mainViewModel: mainViewModel),
+          RoundPage(mainViewModel: mainViewModel),
+          MeterPage(mainViewModel: mainViewModel),
+          BobbinPage(mainViewModel: mainViewModel),
         ],
       ),
     );

@@ -4,28 +4,28 @@ import '../../../../utils/constants/enums/app_enum.dart';
 import '../../../../utils/extensions/context_extension.dart';
 import '../../models/field_model.dart';
 import '../../view-models/main_view_model.dart';
-import '../page_template_2.dart';
+import '../page_template_1.dart';
 
-class PercentCalculatePage extends StatelessWidget {
+class BobbinPage extends StatelessWidget {
   final MainViewModel mainViewModel;
 
-  const PercentCalculatePage({
+  const BobbinPage({
     super.key,
     required this.mainViewModel,
   });
 
   @override
   Widget build(BuildContext context) {
-    return PageTemplate2(
-      title: context.l10n.percentCalculate,
-      mainViewModel: mainViewModel,
-      calculate: Calculate.percentCalculate,
-      columnCount: 2,
+    return PageTemplate1(
+      title: context.l10n.bobbin,
       fields: const [
-        FieldModel(center: "6B1", right: "%"),
-        FieldModel(center: "6B2", right: "%"),
-        FieldModel(center: "6B3", right: "%"),
+        FieldModel(left: "Bobin"),
+        FieldModel(left: "Kops"),
+        FieldModel(left: "Den"),
+        FieldModel(left: "Fire"),
       ],
+      mainViewModel: mainViewModel,
+      calculate: Calculate.bobbin,
     );
   }
 }

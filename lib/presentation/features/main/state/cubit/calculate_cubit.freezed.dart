@@ -17,7 +17,7 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$CalculateState {
   Map<String, double> get fields => throw _privateConstructorUsedError;
-  double get result => throw _privateConstructorUsedError;
+  List<double> get result => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CalculateStateCopyWith<CalculateState> get copyWith =>
@@ -30,7 +30,7 @@ abstract class $CalculateStateCopyWith<$Res> {
           CalculateState value, $Res Function(CalculateState) then) =
       _$CalculateStateCopyWithImpl<$Res, CalculateState>;
   @useResult
-  $Res call({Map<String, double> fields, double result});
+  $Res call({Map<String, double> fields, List<double> result});
 }
 
 /// @nodoc
@@ -57,7 +57,7 @@ class _$CalculateStateCopyWithImpl<$Res, $Val extends CalculateState>
       result: null == result
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as double,
+              as List<double>,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$CalculateStateImplCopyWith<$Res>
       __$$CalculateStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({Map<String, double> fields, double result});
+  $Res call({Map<String, double> fields, List<double> result});
 }
 
 /// @nodoc
@@ -93,9 +93,9 @@ class __$$CalculateStateImplCopyWithImpl<$Res>
           : fields // ignore: cast_nullable_to_non_nullable
               as Map<String, double>,
       result: null == result
-          ? _value.result
+          ? _value._result
           : result // ignore: cast_nullable_to_non_nullable
-              as double,
+              as List<double>,
     ));
   }
 }
@@ -104,8 +104,10 @@ class __$$CalculateStateImplCopyWithImpl<$Res>
 
 class _$CalculateStateImpl implements _CalculateState {
   const _$CalculateStateImpl(
-      {final Map<String, double> fields = const {}, this.result = 0.0})
-      : _fields = fields;
+      {final Map<String, double> fields = const {},
+      final List<double> result = const []})
+      : _fields = fields,
+        _result = result;
 
   final Map<String, double> _fields;
   @override
@@ -116,9 +118,14 @@ class _$CalculateStateImpl implements _CalculateState {
     return EqualUnmodifiableMapView(_fields);
   }
 
+  final List<double> _result;
   @override
   @JsonKey()
-  final double result;
+  List<double> get result {
+    if (_result is EqualUnmodifiableListView) return _result;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_result);
+  }
 
   @override
   String toString() {
@@ -131,12 +138,14 @@ class _$CalculateStateImpl implements _CalculateState {
         (other.runtimeType == runtimeType &&
             other is _$CalculateStateImpl &&
             const DeepCollectionEquality().equals(other._fields, _fields) &&
-            (identical(other.result, result) || other.result == result));
+            const DeepCollectionEquality().equals(other._result, _result));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_fields), result);
+      runtimeType,
+      const DeepCollectionEquality().hash(_fields),
+      const DeepCollectionEquality().hash(_result));
 
   @JsonKey(ignore: true)
   @override
@@ -149,12 +158,12 @@ class _$CalculateStateImpl implements _CalculateState {
 abstract class _CalculateState implements CalculateState {
   const factory _CalculateState(
       {final Map<String, double> fields,
-      final double result}) = _$CalculateStateImpl;
+      final List<double> result}) = _$CalculateStateImpl;
 
   @override
   Map<String, double> get fields;
   @override
-  double get result;
+  List<double> get result;
   @override
   @JsonKey(ignore: true)
   _$$CalculateStateImplCopyWith<_$CalculateStateImpl> get copyWith =>

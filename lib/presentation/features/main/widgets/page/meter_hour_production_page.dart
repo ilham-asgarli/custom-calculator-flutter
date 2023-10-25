@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../utils/constants/app/field_constants.dart';
 import '../../../../utils/constants/enums/app_enum.dart';
 import '../../../../utils/extensions/context_extension.dart';
 import '../../view-models/main_view_model.dart';
@@ -19,6 +20,10 @@ class MeterHourProductionPage extends StatelessWidget {
       title: context.l10n.meterHourProduction,
       mainViewModel: mainViewModel,
       calculate: Calculate.meterHourProduction,
+      fields: const [
+        FieldConstants.cycle,
+        FieldConstants.may,
+      ],
     );
   }
 }

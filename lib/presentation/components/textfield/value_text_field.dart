@@ -34,7 +34,7 @@ class ValueTextField extends StatelessWidget {
         ),
         keyboardType: TextInputType.number,
         inputFormatters: [
-          FilteringTextInputFormatter.allow(RegExp(r'^(\d+)?\.?\d{0,10}'))
+          FilteringTextInputFormatter.allow(RegExp(r'^(\d+)?\.?\d{0,20}'))
         ],
         textAlign: TextAlign.center,
         onChanged: (value) {
