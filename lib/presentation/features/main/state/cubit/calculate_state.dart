@@ -4,6 +4,6 @@ part of 'calculate_cubit.dart';
 class CalculateState with _$CalculateState {
   const factory CalculateState({
     @Default({}) Map<String, double> fields,
-    @Default([]) List<double> result,
+    @Default([]) List<num> result,
   }) = _CalculateState;
 }

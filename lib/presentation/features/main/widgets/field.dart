@@ -5,7 +5,7 @@ import '../models/field_model.dart';
 
 class Field extends StatelessWidget {
   final FieldModel? fieldModel;
-  final double? value;
+  final num? value;
   final int? index;
 
   const Field({

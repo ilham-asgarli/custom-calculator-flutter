@@ -83,7 +83,7 @@ class _PageTemplate2State extends State<PageTemplate2>
                                               try {
                                                 return state.result[i];
                                               } catch (e) {
-                                                return 0.0;
+                                                return 0;
                                               }
                                             }(),
                                           );

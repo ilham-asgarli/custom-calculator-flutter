@@ -7,7 +7,7 @@ import '../../utils/extensions/context_extension.dart';
 import '../../utils/extensions/theme_extension.dart';
 
 class ValueTextField extends StatelessWidget {
-  final double? value;
+  final num? value;
   final int? index;
 
   const ValueTextField({

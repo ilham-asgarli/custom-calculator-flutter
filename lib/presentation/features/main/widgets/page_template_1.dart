@@ -72,7 +72,7 @@ class _PageTemplate1State extends State<PageTemplate1>
                       try {
                         return state.result.first;
                       } catch (e) {
-                        return 0.0;
+                        return 0;
                       }
                     }(),
                     fieldModel: widget.result,

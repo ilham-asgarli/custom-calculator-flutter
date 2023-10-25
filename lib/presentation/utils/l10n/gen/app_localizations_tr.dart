@@ -33,4 +33,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get bobbin => 'Çöz. Bobin Hesaplama';
+
+  @override
+  String get reel => 'Makara kg Hesaplama';
 }

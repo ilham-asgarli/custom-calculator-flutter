@@ -7,6 +7,7 @@ import '../widgets/page/meter_calculate_page.dart';
 import '../widgets/page/meter_hour_production_page.dart';
 import '../widgets/page/meter_page.dart';
 import '../widgets/page/percent_calculate_page.dart';
+import '../widgets/page/reel_page.dart';
 import '../widgets/page/round_page.dart';
 
 class MainView extends StatelessWidget {
@@ -29,6 +30,7 @@ class MainView extends StatelessWidget {
           RoundPage(mainViewModel: mainViewModel),
           MeterPage(mainViewModel: mainViewModel),
           BobbinPage(mainViewModel: mainViewModel),
+          ReelPage(mainViewModel: mainViewModel),
         ],
       ),
     );

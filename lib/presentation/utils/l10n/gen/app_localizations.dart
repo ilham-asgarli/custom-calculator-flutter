@@ -150,6 +150,12 @@ abstract class AppLocalizations {
   /// In tr, this message translates to:
   /// **'Çöz. Bobin Hesaplama'**
   String get bobbin;
+
+  /// No description provided for @reel.
+  ///
+  /// In tr, this message translates to:
+  /// **'Makara kg Hesaplama'**
+  String get reel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

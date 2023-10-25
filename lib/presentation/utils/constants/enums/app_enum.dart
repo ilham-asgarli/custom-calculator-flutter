@@ -8,4 +8,5 @@ enum Calculate {
   percentCalculate,
   meterHourProduction,
   bobbin,
+  reel,
 }

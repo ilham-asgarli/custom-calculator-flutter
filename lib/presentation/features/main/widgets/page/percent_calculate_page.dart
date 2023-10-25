@@ -22,9 +22,9 @@ class PercentCalculatePage extends StatelessWidget {
       calculate: Calculate.percentCalculate,
       columnCount: 2,
       fields: const [
-        FieldModel(center: "6B1", right: "%"),
-        FieldModel(center: "6B2", right: "%"),
-        FieldModel(center: "6B3", right: "%"),
+        FieldModel(center: "GB1", right: "%"),
+        FieldModel(center: "GB2", right: "%"),
+        FieldModel(center: "GB3", right: "%"),
       ],
     );
   }

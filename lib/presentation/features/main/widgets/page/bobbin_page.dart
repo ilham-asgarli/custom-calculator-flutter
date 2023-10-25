@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../utils/constants/app/field_constants.dart';
 import '../../../../utils/constants/enums/app_enum.dart';
 import '../../../../utils/extensions/context_extension.dart';
 import '../../models/field_model.dart';
@@ -26,6 +27,7 @@ class BobbinPage extends StatelessWidget {
       ],
       mainViewModel: mainViewModel,
       calculate: Calculate.bobbin,
+      result: FieldModel.result(fieldModel: FieldConstants.meter),
     );
   }
 }

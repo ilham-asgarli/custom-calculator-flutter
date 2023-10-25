@@ -25,7 +25,11 @@ class MeterCalculate extends StatelessWidget {
         FieldConstants.rack,
         FieldConstants.may,
       ],
-      result: FieldModel.result(fieldModel: FieldConstants.meter),
+      result: FieldModel.result(
+        fieldModel: FieldConstants.meter.copyWith(
+          right: "1 MT",
+        ),
+      ),
     );
   }
 }
